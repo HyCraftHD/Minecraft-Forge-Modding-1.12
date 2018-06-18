@@ -1,11 +1,15 @@
 package net.hycrafthd.tutorialmod;
 
 import static net.hycrafthd.tutorialmod.TutorialConstants.*;
+
+import net.hycrafthd.tutorialmod.proxy.CommonProxy;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
@@ -17,6 +21,24 @@ public class TutorialMod {
 
 	public static TutorialMod getInstance() {
 		return instance;
+	}
+
+	@SidedProxy(serverSide = "net.hycrafthd.tutorialmod.proxy.CommonProxy", clientSide = "net.hycrafthd.tutorialmod.proxy.ClientProxy")
+	private static CommonProxy proxy;
+
+	@EventHandler
+	public void preinit(FMLPreInitializationEvent event) {
+		proxy.preinit(event);
+	}
+
+	@EventHandler
+	public void init(FMLInitializationEvent event) {
+		proxy.init(event);
+	}
+
+	@EventHandler
+	public void postinit(FMLPostInitializationEvent event) {
+		proxy.postinit(event);
 	}
 
 }
