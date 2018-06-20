@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "minecraft:iron_ingot"
+		},
+		{
+			"item": "minecraft:iron_block"
+		},
+		{
+			"item": "minecraft:gold_ingot"
+		}
+	],
+	"result": {
+		"item": "minecraft:stone",
+		"data": 0,
+		"count": 64
+	}
+}
