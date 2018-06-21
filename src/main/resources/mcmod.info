@@ -1,15 +1,15 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "tutorialmod",
+  "name": "Tutorial Mod",
+  "description": "Hallo, dies ist eine super krasse Beschreibung",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://hycrafthd.net",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
-  "logoFile": "",
+  "authorList": ["HyCraftHD"],
+  "credits": "The Forge and FML guys, for making forge, and ...",
+  "logoFile": "assets/tutorialmod/icon.png",
   "screenshots": [],
   "dependencies": []
 }
