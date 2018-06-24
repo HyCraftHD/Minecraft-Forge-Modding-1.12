@@ -3,3 +3,6 @@ itemGroup.tuttab=Tutorial Tab
 
 #Items
 item.tutitem.name=Tutorial Item
+
+#Blocks
+tile.tutblock.name=Tutorial Block

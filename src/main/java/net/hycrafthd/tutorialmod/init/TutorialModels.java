@@ -11,6 +11,7 @@ public class TutorialModels {
 	@SubscribeEvent
 	public static void register(ModelRegistryEvent event) {
 		register(TutorialItems.tutitem);
+		register(Item.getItemFromBlock(TutorialBlocks.tutblock));
 	}
 
 	private static void register(Item item) {

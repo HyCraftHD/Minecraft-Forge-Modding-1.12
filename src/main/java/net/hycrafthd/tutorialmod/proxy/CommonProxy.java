@@ -1,5 +1,6 @@
 package net.hycrafthd.tutorialmod.proxy;
 
+import net.hycrafthd.tutorialmod.init.TutorialBlocks;
 import net.hycrafthd.tutorialmod.init.TutorialItems;
 import net.hycrafthd.tutorialmod.init.TutorialTabs;
 import net.minecraft.init.Blocks;
@@ -12,8 +13,10 @@ public class CommonProxy {
 
 	public void preinit(FMLPreInitializationEvent event) {
 		TutorialItems.init();
+		TutorialBlocks.init();
 
 		MinecraftForge.EVENT_BUS.register(TutorialItems.class);
+		MinecraftForge.EVENT_BUS.register(TutorialBlocks.class);
 	}
 
 	public void init(FMLInitializationEvent event) {
