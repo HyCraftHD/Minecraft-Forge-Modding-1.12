@@ -4,5 +4,7 @@ itemGroup.tuttab=Tutorial Tab
 #Items
 item.tutitem.name=Tutorial Item
 
+item.teleporter.name=Teleporter
+
 #Blocks
 tile.tutblock.name=Tutorial Block
