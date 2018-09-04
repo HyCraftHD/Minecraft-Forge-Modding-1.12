@@ -6,5 +6,7 @@ item.tutitem.name=Tutorial Item
 
 item.teleporter.name=Teleporter
 
+item.superfood.name=Super Food
+
 #Blocks
 tile.tutblock.name=Tutorial Block

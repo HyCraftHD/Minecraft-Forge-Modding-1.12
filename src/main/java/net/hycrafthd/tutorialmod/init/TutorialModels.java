@@ -13,6 +13,8 @@ public class TutorialModels {
 		register(TutorialItems.tutitem);
 
 		register(TutorialItems.teleporter);
+		
+		register(TutorialItems.superfood);
 
 		register(Item.getItemFromBlock(TutorialBlocks.tutblock));
 	}
