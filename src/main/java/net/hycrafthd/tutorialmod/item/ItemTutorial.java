@@ -1,6 +1,5 @@
 package net.hycrafthd.tutorialmod.item;
 
-import net.hycrafthd.tutorialmod.init.TutorialBlocks;
 import net.hycrafthd.tutorialmod.init.TutorialTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;

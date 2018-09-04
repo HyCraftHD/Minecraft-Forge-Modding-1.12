@@ -1,9 +1,10 @@
 package net.hycrafthd.tutorialmod;
 
-import static net.hycrafthd.tutorialmod.TutorialConstants.*;
+import static net.hycrafthd.tutorialmod.TutorialConstants.MODID;
+import static net.hycrafthd.tutorialmod.TutorialConstants.NAME;
+import static net.hycrafthd.tutorialmod.TutorialConstants.VERSION;
 
 import net.hycrafthd.tutorialmod.proxy.CommonProxy;
-import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
@@ -11,7 +12,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
 
 @Mod(modid = MODID, name = NAME, version = VERSION)
 public class TutorialMod {

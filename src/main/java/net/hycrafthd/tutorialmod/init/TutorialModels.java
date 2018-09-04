@@ -13,8 +13,14 @@ public class TutorialModels {
 		register(TutorialItems.tutitem);
 
 		register(TutorialItems.teleporter);
-		
+
 		register(TutorialItems.superfood);
+
+		register(TutorialItems.emeraldSword);
+		register(TutorialItems.emeraldPickaxe);
+		register(TutorialItems.emeraldAxe);
+		register(TutorialItems.emeraldSpade);
+		register(TutorialItems.emeraldHoe);
 
 		register(Item.getItemFromBlock(TutorialBlocks.tutblock));
 	}
