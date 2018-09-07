@@ -14,5 +14,10 @@ item.emerald_axe.name=Emerald Axe
 item.emerald_spade.name=Emerald Shovel
 item.emerald_hoe.name=Emerald Hoe
 
+item.emerald_helmet.name=Emerald Helmet
+item.emerald_chestplate.name=Emerald Chestplate
+item.emerald_leggings.name=Emerald Leggings
+item.emerald_boots.name=Emerald Boots
+
 #Blocks
 tile.tutblock.name=Tutorial Block

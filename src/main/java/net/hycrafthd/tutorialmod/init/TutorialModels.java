@@ -22,6 +22,11 @@ public class TutorialModels {
 		register(TutorialItems.emeraldSpade);
 		register(TutorialItems.emeraldHoe);
 
+		register(TutorialItems.emeraldHelmet);
+		register(TutorialItems.emeraldChestplate);
+		register(TutorialItems.emeraldLeggings);
+		register(TutorialItems.emeraldBoots);
+
 		register(Item.getItemFromBlock(TutorialBlocks.tutblock));
 	}
 

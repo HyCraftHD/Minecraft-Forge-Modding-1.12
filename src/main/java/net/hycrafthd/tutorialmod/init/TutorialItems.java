@@ -1,6 +1,7 @@
 package net.hycrafthd.tutorialmod.init;
 
 import net.hycrafthd.tutorialmod.TutorialConstants;
+import net.hycrafthd.tutorialmod.item.ItemEmeraldArmor;
 import net.hycrafthd.tutorialmod.item.ItemEmeraldAxe;
 import net.hycrafthd.tutorialmod.item.ItemEmeraldHoe;
 import net.hycrafthd.tutorialmod.item.ItemEmeraldPickaxe;
@@ -9,8 +10,11 @@ import net.hycrafthd.tutorialmod.item.ItemEmeraldSword;
 import net.hycrafthd.tutorialmod.item.ItemSuperFood;
 import net.hycrafthd.tutorialmod.item.ItemTeleporter;
 import net.hycrafthd.tutorialmod.item.ItemTutorial;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.RegistryEvent;
@@ -32,6 +36,12 @@ public class TutorialItems {
 	public static final ItemEmeraldSpade emeraldSpade = new ItemEmeraldSpade(emeraldToolMaterial);
 	public static final ItemEmeraldHoe emeraldHoe = new ItemEmeraldHoe(emeraldToolMaterial);
 
+	public static final ArmorMaterial emeraldArmorMaterial = EnumHelper.addArmorMaterial("emerald", TutorialConstants.MODID + ":emerald", 1000, new int[] { 3, 5, 7, 3 }, 30, SoundEvents.ENTITY_ZOMBIE_VILLAGER_HURT, 0F);
+	public static final ItemEmeraldArmor emeraldHelmet = new ItemEmeraldArmor(emeraldArmorMaterial, 0, EntityEquipmentSlot.HEAD);
+	public static final ItemEmeraldArmor emeraldChestplate = new ItemEmeraldArmor(emeraldArmorMaterial, 1, EntityEquipmentSlot.CHEST);
+	public static final ItemEmeraldArmor emeraldLeggings = new ItemEmeraldArmor(emeraldArmorMaterial, 2, EntityEquipmentSlot.LEGS);
+	public static final ItemEmeraldArmor emeraldBoots = new ItemEmeraldArmor(emeraldArmorMaterial, 3, EntityEquipmentSlot.FEET);
+
 	public static void init() {
 		setName(tutitem, "tutitem");
 		setName(teleporter, "teleporter");
@@ -42,6 +52,11 @@ public class TutorialItems {
 		setName(emeraldAxe, "emerald_axe");
 		setName(emeraldSpade, "emerald_spade");
 		setName(emeraldHoe, "emerald_hoe");
+
+		setName(emeraldHelmet, "emerald_helmet");
+		setName(emeraldChestplate, "emerald_chestplate");
+		setName(emeraldLeggings, "emerald_leggings");
+		setName(emeraldBoots, "emerald_boots");
 	}
 
 	@SubscribeEvent
@@ -54,6 +69,8 @@ public class TutorialItems {
 		registry.register(superfood);
 
 		registry.registerAll(emeraldSword, emeraldPickaxe, emeraldAxe, emeraldSpade, emeraldHoe);
+
+		registry.registerAll(emeraldHelmet, emeraldChestplate, emeraldLeggings, emeraldBoots);
 	}
 
 	public static void setName(Item item, String name) {
