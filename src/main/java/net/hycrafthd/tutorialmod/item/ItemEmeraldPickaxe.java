@@ -8,6 +8,7 @@ public class ItemEmeraldPickaxe extends ItemPickaxe {
 	public ItemEmeraldPickaxe(ToolMaterial material) {
 		super(material);
 		setCreativeTab(TutorialTabs.tab);
+		attackSpeed = -8;
 	}
 
 }

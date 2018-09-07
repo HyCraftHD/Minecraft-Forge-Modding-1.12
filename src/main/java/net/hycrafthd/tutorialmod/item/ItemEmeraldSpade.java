@@ -8,6 +8,7 @@ public class ItemEmeraldSpade extends ItemSpade {
 	public ItemEmeraldSpade(ToolMaterial material) {
 		super(material);
 		setCreativeTab(TutorialTabs.tab);
+		attackDamage = 55;
 	}
 
 }
