@@ -21,3 +21,4 @@ item.emerald_boots.name=Emerald Boots
 
 #Blocks
 tile.tutblock.name=Tutorial Block
+tile.tutblockfacing.name=Tutorial Block Facing
