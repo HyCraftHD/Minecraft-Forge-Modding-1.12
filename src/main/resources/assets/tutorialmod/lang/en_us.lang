@@ -19,6 +19,8 @@ item.emerald_chestplate.name=Emerald Chestplate
 item.emerald_leggings.name=Emerald Leggings
 item.emerald_boots.name=Emerald Boots
 
+item.wrench.name=Wrench
+
 #Blocks
 tile.tutblock.name=Tutorial Block
 tile.tutblockfacing.name=Tutorial Block Facing

@@ -27,6 +27,8 @@ public class TutorialModels {
 		register(TutorialItems.emeraldLeggings);
 		register(TutorialItems.emeraldBoots);
 		
+		register(TutorialItems.wrench);
+		
 		register(Item.getItemFromBlock(TutorialBlocks.tutblock));
 		
 		register(Item.getItemFromBlock(TutorialBlocks.tutblockfacing));
