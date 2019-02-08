@@ -1,16 +1,20 @@
 package net.hycrafthd.tutorialmod.block;
 
+import net.hycrafthd.tutorialmod.TutorialConstants;
 import net.hycrafthd.tutorialmod.init.TutorialTabs;
-import net.minecraft.block.Block;
+import net.hycrafthd.tutorialmod.tileentity.TileEntityTutorialFacing;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.*;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.*;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class BlockTutorialFacing extends Block {
+public class BlockTutorialFacing extends Block implements ITileEntityProvider {
 	
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
 	
@@ -18,6 +22,7 @@ public class BlockTutorialFacing extends Block {
 		super(Material.ROCK);
 		setCreativeTab(TutorialTabs.tab);
 		setDefaultState(getDefaultState().withProperty(FACING, EnumFacing.NORTH));
+		GameRegistry.registerTileEntity(TileEntityTutorialFacing.class, new ResourceLocation(TutorialConstants.MODID, "tutblockfacing"));
 	}
 	
 	@Override
@@ -49,6 +54,11 @@ public class BlockTutorialFacing extends Block {
 			return true;
 		}
 		return false;
+	}
+	
+	@Override
+	public TileEntity createNewTileEntity(World worldIn, int meta) {
+		return new TileEntityTutorialFacing();
 	}
 	
 }
