@@ -8,7 +8,7 @@ import net.minecraft.block.state.*;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.*;
 
 public class BlockTutorialFacing extends Block {
 	
@@ -38,6 +38,17 @@ public class BlockTutorialFacing extends Block {
 	@Override
 	protected BlockStateContainer createBlockState() {
 		return new BlockStateContainer(this, FACING);
+	}
+	
+	@Override
+	public boolean canConnectRedstone(IBlockState state, IBlockAccess world, BlockPos pos, EnumFacing side) {
+		if (side == null) {
+			return true;
+		}
+		if (state.getValue(FACING) != side.getOpposite()) {
+			return true;
+		}
+		return false;
 	}
 	
 }
